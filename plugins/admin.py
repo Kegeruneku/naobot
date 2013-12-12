@@ -13,7 +13,7 @@ class admin(stdPlugin):
 
     def is_admin(self, nick):
         sender = nick.split('!')[0]
-        if sender in self.conf['admins']:
+        if sender in naobot.conf['admins']:
             return True
         else:
             return False

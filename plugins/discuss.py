@@ -5,6 +5,9 @@ from datetime import datetime
 import re
 from stdPlugin import stdPlugin
 
+from core import i18n
+_ = i18n.language.ugettext
+
 class discuss(stdPlugin):
     u'''Tente d’engager la conversation sur un canal.'''
 
@@ -82,10 +85,10 @@ class discuss(stdPlugin):
                                  self.answer_message,
                                  u'Ho, ta gueule %(nick)s',
                                  ],
-                          'joining': [u'Coucou, tu veux voir mon bit ?',
-                                      u'Ohai %(chan)s o/',
-                                      u'Faites comme si j’étais pas là.',
-                                      u'De toutes façons, il meurt à la fin.',
+                          'joining': [_(u'Coucou, tu veux voir mon bit ?'),
+                                      _(u'Ohai %(chan)s o/'),
+                                      _(u'Faites comme si j’étais pas là.'),
+                                      _(u'De toutes façons, il meurt à la fin.'),
                                       ],
                           'kick': [u'Bon débarras.',
                                    u'J’en avais marre de %(victim)s de toutes façons',

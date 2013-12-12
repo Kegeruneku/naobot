@@ -11,7 +11,7 @@ class ping(stdPlugin):
 
     def __init__(self, bot, conf):
         return_val = super(ping, self).__init__(bot, conf)
-        self.machines = conf['machines']
+        self.machines = self.conf['machines']
         self.regex = re.compile('([0-9]{1,3})% packet loss')
         return return_val
 
